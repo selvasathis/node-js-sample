@@ -7,6 +7,6 @@ app.get('/', function(request, response) {
   response.send('Hello World!')
 })
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
+app.listen(PORT, HOST, () => {
+  console.log(`Running on http://${HOST}:${PORT}`);
 })
