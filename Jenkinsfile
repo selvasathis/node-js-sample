@@ -18,7 +18,7 @@ pipeline {
         stage ('container run') {
             steps {
                 script {
-                    sh 'docker run -itd --name nodejscont1 -p "9098:5000" nodejsapp'
+                    sh 'docker run -itd --name nodejscont1 -P nodejsapp'
                 }
             }
         }
