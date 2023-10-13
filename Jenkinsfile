@@ -15,5 +15,13 @@ pipeline {
                 }
             }
         }
+        stage ('container run') {
+            steps {
+                script {
+                    sh 'docker run -itd --name nodejscont1 -p "3000:3000" nodejsapp'
+                }
+            }
+        }
     }
 }
+
